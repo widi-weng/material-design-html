@@ -2,6 +2,8 @@
  * global require
  */
 
+'use strict';
+
 requirejs.config({
     baseUrl: 'assets',
     paths: {
