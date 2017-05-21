@@ -1,0 +1,10 @@
+$menu-bg: #333;
+
+menu {
+    background: $menu-bg;
+    color: #eee;
+}
+
+#sign {
+    background: ligthen($menu-bg, 10%);
+}

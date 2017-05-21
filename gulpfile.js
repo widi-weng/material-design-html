@@ -11,7 +11,7 @@ gulp.task('default', function () {
 
 gulp.task('sass', function () {
     console.log('SASS: Produce CSS and source maps');
-    return gulp.src('assets/scss/*.scss')
+    return gulp.src('assets/scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
@@ -20,9 +20,9 @@ gulp.task('sass', function () {
  
 gulp.task('sass:watch', function () {
     console.log('SASS Watch: Watching changes in SCSS files');
-    gulp.watch('assets/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/scss/*.scss', ['sass']);
 });
 
 gulp.task('develop', ['default', 'sass', 'sass:watch'], function() {
-  // Do stuff
+    // Do stuff
 });

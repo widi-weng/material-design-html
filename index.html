@@ -21,25 +21,48 @@
         <!--Menu-->
         <menu>
             <!--Logo-->
+            <div id="logo">Logo: Kotak Karir</div>
+
             <!--Login-->
+            <div id="sign" class="flex-items-center pointer">
+                <i class="material-icons md-24">account_circle</i>Sign in
+            </div>
+
             <!--Account-->
             <!--Menu list with icons-->
+            <ul class="list-no-bullet flex-list-items-center">
+                <li><i class="material-icons md-24">home</i>Home</li>
+                <li><i class="material-icons md-24">settings</i>Settings</li>
+                <li><i class="material-icons md-24">info</i>About</li>
+                <li><i class="material-icons md-24">help</i>Help</li>
+            </ul>
         </menu>
         
         <!--Main content-->
         <main>
             <!--Main title and menu icon (shows on mobile only)-->
-            <header>
-                <!--TODO menu icon-->
-                Home
+            <header class="flex-items-center">
+                <!--Menu icon-->
+                <div><i class="material-icons md-24">menu</i></div>
+                <!--Header-->
+                <div>Home</div>
             </header>
 
             <!--Content-->
-            <section>
+            <section class="job-list">
+                <div>
+                    <div>
+                        <img class="vendor-logo" src="assets/images/biohazard.png" title="Google" alt="Google">
+                        <h4>Google</h4>
+
+                        <div class="flex-items-center"><i class="material-icons md-18">timelapse</i>1 day ago</div>
+                    </div>
+                </div>
+                
                 <!-- Accent-colored raised button with ripple -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                <!--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                 Button
-                </button>
+                </button>-->
             </section>
         </main> 
     </body>
