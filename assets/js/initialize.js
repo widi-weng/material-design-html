@@ -27,5 +27,17 @@ requirejs(
         main
     ) {
         console.info('Initialized', mdl, $, main);
+
+        var menu_icon = $('#menu-icon'),
+            menu_container = $('menu');
+
+        function toggleMenu() {
+            menu_container.hasClass('active') ?
+                menu_container.removeClass('active'):
+                menu_container.addClass('active');
+        }
+
+        menu_icon.click(toggleMenu);
+        menu_container.click(toggleMenu); 
     }
 )

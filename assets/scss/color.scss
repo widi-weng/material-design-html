@@ -1,10 +1,50 @@
 $menu-bg: #333;
 
 menu {
-    background: $menu-bg;
+    background: rgba(0,0,0,0.7);
     color: #eee;
+
+    > section {
+        background: $menu-bg;
+    }
+
+    .selected, li:hover {
+        background: rgba(0,0,0,1);
+    }
 }
 
 #sign {
-    background: ligthen($menu-bg, 10%);
+    background: rgba(40,50,55,1);
+}
+
+main {
+    background: rgba(244,244,244,1);
+}
+
+header {
+    background: rgba(82,175,236,1);
+    color: #fff;
+}
+
+#search {
+    background: rgba(251,251,251,1);
+}
+
+.tabs {
+    > div {
+        border-bottom: 1px solid none;
+
+        &.selected, &:hover {
+            border-bottom: 1px solid rgba(82,175,236,1);
+        }
+    }
+}
+
+.job-list {
+
+    > div {
+        > div {
+            background: #fff;
+        }
+    }
 }

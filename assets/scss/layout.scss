@@ -1,10 +1,8 @@
+// Mobile first
+
 main, menu, ul {
     margin: 0;
     padding: 0;
-}
-
-main, menu {
-    float: left;
 }
 
 .pointer {
@@ -13,6 +11,10 @@ main, menu {
 
 .list-no-bullet {
     list-style: none;
+}
+
+.flex-items {
+    display: flex;
 }
 
 .flex-items-center {
@@ -30,38 +32,109 @@ main, menu {
     padding-right: 10px;
 }
 
-menu {
-    box-sizing: border-box;
-    width: 200px;
 
-    ul > li {
-        padding: 15px 25px;
-        @extend .pointer;
+// Menu
+$menu-size: 200px;
+
+#menu-icon {
+    @extend .pointer;
+}
+
+menu {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    > section {
+        position: absolute;
+        z-index: 101;
+        top: 0;
+        left: -$menu-size;
+        width: $menu-size;
+        height: 100%;
+
+        ul > li {
+            padding: 15px 25px;
+            @extend .pointer;
+        }
+    }
+
+    // On menu active
+    &.active {
+        display: block;
+
+        & > section {
+            transition: left 1s ease-out;
+            left: 0;
+        }
     }
 }
 
-#logo, #sign, header {
+#logo, #sign, #search, header {
     padding: 15px 25px;
 }
 
-// main {
-//     width: 100%;
-// }
+// Main content
+main {
+    width: 100%;
+}
+
+#search {
+    input {
+        padding: 10px;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+    }
+}
+
+.tabs {
+    width: 100%;
+    padding: 25px;
+    @extend .flex-items-center;
+
+    > div {
+        padding: 0 25px 10px;
+    }
+}
 
 .job-list {
+    width: 100%;
+
     > div {
-        padding: 15px;
+        float: left;
         width: 20%;
 
         > div {
             border-radius: 3px;
             border: 1px solid lightgrey;
+            margin: 15px 25px 15px 0;
+            padding: 15px 25px;
 
-            h4 {
-                margin: 0 0 15px;
+            h5 {
+                margin: 15px 0;
+            }
+
+            h6 {
+                margin: 10px 0 5px;
             }
         }
     }
+
+    > div:first-child {
+        > div {
+            margin: 15px 25px;
+        }
+    }
+}
+
+.salary-range, .location, .time-lapse {
+    margin-top: 10px;
 }
 
 .vendor-logo {

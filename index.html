@@ -17,25 +17,29 @@
         <script src="assets/js/initialize.js"></script>
     </head>
 
-    <body>
-        <!--Menu-->
+    <body class="flex-items">
+
+        <!--Menu container and backdrop-->
         <menu>
-            <!--Logo-->
-            <div id="logo">Logo: Kotak Karir</div>
+            <!--Actual menu section-->
+            <section>
+                <!--Logo-->
+                <div id="logo">Logo: Kotak Karir</div>
 
-            <!--Login-->
-            <div id="sign" class="flex-items-center pointer">
-                <i class="material-icons md-24">account_circle</i>Sign in
-            </div>
+                <!--Login-->
+                <div id="sign" class="flex-items-center pointer">
+                    <i class="material-icons md-24">account_circle</i>Sign in
+                </div>
 
-            <!--Account-->
-            <!--Menu list with icons-->
-            <ul class="list-no-bullet flex-list-items-center">
-                <li><i class="material-icons md-24">home</i>Home</li>
-                <li><i class="material-icons md-24">settings</i>Settings</li>
-                <li><i class="material-icons md-24">info</i>About</li>
-                <li><i class="material-icons md-24">help</i>Help</li>
-            </ul>
+                <!--Account-->
+                <!--Menu list with icons-->
+                <ul class="list-no-bullet flex-list-items-center">
+                    <li class="selected"><i class="material-icons md-24">home</i>Home</li>
+                    <li><i class="material-icons md-24">settings</i>Settings</li>
+                    <li><i class="material-icons md-24">info</i>About</li>
+                    <li><i class="material-icons md-24">help</i>Help</li>
+                </ul>
+            </section>
         </menu>
         
         <!--Main content-->
@@ -43,22 +47,85 @@
             <!--Main title and menu icon (shows on mobile only)-->
             <header class="flex-items-center">
                 <!--Menu icon-->
-                <div><i class="material-icons md-24">menu</i></div>
+                <i id="menu-icon" class="material-icons md-24">menu</i>
                 <!--Header-->
-                <div>Home</div>
+                <span>Home</span>
             </header>
+
+            <!--Search-->
+            <section id="search">
+                <input type="text" value="" placeholder="Search">
+            </section>
+
+            <!--Tabs-->
+            <section class="tabs">
+                <div>Popular</div>
+                <div>Matched</div>
+                <div>New</div>
+            </section>
 
             <!--Content-->
             <section class="job-list">
                 <div>
                     <div>
                         <img class="vendor-logo" src="assets/images/biohazard.png" title="Google" alt="Google">
-                        <h4>Google</h4>
-
-                        <div class="flex-items-center"><i class="material-icons md-18">timelapse</i>1 day ago</div>
+                        <h5>Google</h5>
+                        <hr>
+                        <h6>Job title</h6>
+                        <div class="salary-range">$100 - $1000 /month</div>
+                        <div class="location">Location</div>
+                        <div class="time-lapse flex-items-center"><i class="material-icons md-18">timelapse</i>1 day ago</div>
                     </div>
                 </div>
-                
+
+                <div>
+                    <div>
+                        <img class="vendor-logo" src="assets/images/biohazard.png" title="Google" alt="Google">
+                        <h5>Google</h5>
+                        <hr>
+                        <h6>Job title</h6>
+                        <div class="salary-range">$100 - $1000 /month</div>
+                        <div class="location">Location</div>
+                        <div class="time-lapse flex-items-center"><i class="material-icons md-18">timelapse</i>1 day ago</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <img class="vendor-logo" src="assets/images/biohazard.png" title="Google" alt="Google">
+                        <h5>Google</h5>
+                        <hr>
+                        <h6>Job title</h6>
+                        <div class="salary-range">$100 - $1000 /month</div>
+                        <div class="location">Location</div>
+                        <div class="time-lapse flex-items-center"><i class="material-icons md-18">timelapse</i>1 day ago</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <img class="vendor-logo" src="assets/images/biohazard.png" title="Google" alt="Google">
+                        <h5>Google</h5>
+                        <hr>
+                        <h6>Job title</h6>
+                        <div class="salary-range">$100 - $1000 /month</div>
+                        <div class="location">Location</div>
+                        <div class="time-lapse flex-items-center"><i class="material-icons md-18">timelapse</i>1 day ago</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <img class="vendor-logo" src="assets/images/biohazard.png" title="Google" alt="Google">
+                        <h5>Google</h5>
+                        <hr>
+                        <h6>Job title</h6>
+                        <div class="salary-range">$100 - $1000 /month</div>
+                        <div class="location">Location</div>
+                        <div class="time-lapse flex-items-center"><i class="material-icons md-18">timelapse</i>1 day ago</div>
+                    </div>
+                </div>
+
                 <!-- Accent-colored raised button with ripple -->
                 <!--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                 Button
