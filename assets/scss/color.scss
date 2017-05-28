@@ -8,8 +8,13 @@ menu {
         background: $menu-bg;
     }
 
+    li {
+        transition: background 0.8s ease-in-out;
+    }
+
     .selected, li:hover {
         background: rgba(0,0,0,1);
+        transition: background 0.8s ease-in-out;
     }
 }
 
@@ -28,23 +33,23 @@ header {
 
 #search {
     background: rgba(251,251,251,1);
-}
 
-.tabs {
-    > div {
-        border-bottom: 1px solid transparent;
-
-        &.selected, &:hover {
-            border-bottom: 1px solid rgba(82,175,236,1);
-        }
+    input:hover, input:focus {
+        border: 1px solid rgba(82,175,236,1);
+        transition: border 0.8s ease-in-out;
     }
 }
 
-.job-list {
+.tabs > div {
+    border-bottom: 1px solid transparent;
+    transition: border 0.8s ease-in-out;
 
-    > div {
-        > div {
-            background: #fff;
-        }
+    &.selected, &:hover {
+        border-bottom: 1px solid rgba(82,175,236,1);
+        transition: border 0.8s ease-in-out;
     }
+}
+
+.job-list > div > div {
+    background: #fff;
 }

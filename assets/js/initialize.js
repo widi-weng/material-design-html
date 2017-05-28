@@ -32,9 +32,20 @@ requirejs(
             menu_container = $('menu');
 
         function toggleMenu() {
-            menu_container.hasClass('active') ?
-                menu_container.removeClass('active'):
-                menu_container.addClass('active');
+            if(menu_container.hasClass('active') ) {
+                menu_container.removeClass('active');
+                setTimeout(function() {
+                    menu_container.removeClass('display');
+                }, 200);
+            }
+            else {
+                menu_container.addClass('display');
+                setTimeout(function() {
+                    menu_container.addClass('active');
+                }, 1);
+            }
+                
+                
         }
 
         menu_icon.click(toggleMenu);

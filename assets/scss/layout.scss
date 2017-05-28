@@ -13,6 +13,10 @@ main, menu, ul {
     list-style: none;
 }
 
+.display {
+    display: block;
+}
+
 .flex-items {
     display: flex;
 }
@@ -51,6 +55,9 @@ menu {
     width: 100%;
     height: 100%;
 
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    
     > section {
         position: absolute;
         z-index: 101;
@@ -58,6 +65,8 @@ menu {
         left: -$menu-size;
         width: $menu-size;
         height: 100%;
+
+        transition: left 0.2s ease-in;
 
         ul > li {
             padding: 15px 25px;
@@ -67,10 +76,12 @@ menu {
 
     // On menu active
     &.active {
-        display: block;
+
+        opacity: 1;
+        transition: opacity 0.2s ease-out;
 
         & > section {
-            transition: left 1s ease-out;
+            transition: left 0.2s ease-out;
             left: 0;
         }
     }
@@ -90,6 +101,8 @@ main {
         padding: 10px;
         border: 1px solid lightgray;
         border-radius: 3px;
+
+        transition: border 0.8s ease-in-out;
     }
 }
 
@@ -99,6 +112,7 @@ main {
 
     > div {
         padding: 0 25px 10px;
+        @extend .pointer;
     }
 }
 
@@ -114,6 +128,8 @@ main {
             border: 1px solid lightgrey;
             margin: 15px 25px 15px 0;
             padding: 15px 25px;
+
+            @extend .pointer;
 
             h5 {
                 margin: 15px 0;
